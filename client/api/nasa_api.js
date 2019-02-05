@@ -5,7 +5,6 @@ const apiEndPoint = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'
 export default function getAPOD() {
   return request.get(apiEndPoint)
   .then(res => {
-    console.log(res.body)
     return res.body
   })
   .catch(() => {

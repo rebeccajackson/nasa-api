@@ -10,10 +10,11 @@ class NasaApi extends Component {
     this.getAPOD = this.getAPOD.bind(this)
   }
   componentDidMount() {
-    getAPOD()
+    this.getAPOD()
+    
   }
   getAPOD(){
-    apod.getAPOD().
+    getAPOD().
     then(apod => {
       this.setState( {
         apod : apod
@@ -21,9 +22,16 @@ class NasaApi extends Component {
     })
   }
   render(){
+
     return (
       <React.Fragment>
-        <h1>We're amazing!!</h1>
+        <h1>NASA Photo of the day!</h1>
+        <ul>
+          <li>{this.state.apod[0]} </li>
+          <li>{this.state.apod[1]} </li>
+          <li>{this.state.apod.date} </li>
+         
+        </ul>
       </React.Fragment>
     )
   }
