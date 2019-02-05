@@ -1,8 +1,9 @@
 import React from 'react'
+import NasaApi from './NasaApi'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <NasaApi />
   )
 }
 
